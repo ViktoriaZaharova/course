@@ -3,6 +3,11 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1740px)
+  .advantages .advantages-text
+    max-width: 605px
+
+
 @media only screen and (max-width : 1550px)
   .main-left
     width: 800px
@@ -42,7 +47,9 @@
     line-height: 22px
 
 
-
+  .advantages .advantages-text
+    max-width: 85%
+    padding: 0 0 30px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1340px)
@@ -307,6 +314,31 @@
     .photo
       margin: 0 20px 0 0
 
+  .main-left
+    min-height: 400px
+
+  .video-wrapper h4
+    font-size: 14px
+    line-height: 18px
+
+  .video-wrapper .links
+    font-size: 14px
+    margin: 5px 0 0 0
+
+  .video-wrapper .text
+    padding: 30px 20px 20px
+
+  .icon-play
+    width: 100px
+    min-width: 100px
+    height: 138px
+    .icon
+      width: 50px
+      height: 50px
+      img
+        width: 20px
+        margin: 0 0 0 5px
+
 @media only screen and (max-width : 768px)
 	/**/
 
@@ -332,7 +364,8 @@
   .video-reviews__content .container
     justify-content: space-around
 
-
+  .main-left
+    max-width: 100%
 
   .video-reviews__content .btn
     width: 290px
@@ -363,10 +396,35 @@
   .line-register .container
     padding: 20px 15px
 
+  .main-left
+    min-height: auto
+
+  .main-left h1
+    padding: 0
+    margin: 20px 20px 100px
+
 @media only screen and (max-width : 480px)
   .list-get li
     width: 100%
     font-size: 16px
+
+  .video-wrapper h4, .video-wrapper .links
+    font-size: 12px
+    line-height: normal
+
+  .main-left .img-bg
+    img
+      max-width: none
+      height: 100%
+      width: auto
+
+  .box-game
+    width: 100%
+    .btn-accent
+      width: 100%
+
+  .box-game .text h5
+    font-size: 22px
 
 
 /* Custom, iPhone Retina */

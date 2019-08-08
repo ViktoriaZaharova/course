@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!localStorage.getItem("heytimer")) {
         var time = {
             days: 0,            // Кількість днів;
-            hours: 24,           // Кількість годин;
+            hours: 23,           // Кількість годин;
             minutes: 59,        // Кількість хвилин;
             seconds: 45          // Кількість секунд;
         }, different = false;
