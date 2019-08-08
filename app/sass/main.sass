@@ -1,0 +1,984 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: 'Roboto', sans-serif
+  background-color: #f8f8f8
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+.text-italic
+  font-style: italic
+
+
+.container
+  max-width: 1140px
+  width: 100%
+  box-sizing: border-box
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+
+a
+  display: block
+  transition: .3s ease
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: none
+    outline: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  outline: none
+  box-shadow: none
+  text-align: center
+
+.btn-accent, [type='submit']
+  border-radius: 30px 0
+  background-image: linear-gradient(to top, #ffc000 0%, #fff600 100%)
+  color: #2b1c66
+  font-size: 24px
+  font-weight: 500
+  letter-spacing: 1.2px
+  width: 294px
+  height: 73px
+  &:hover
+    background-image: linear-gradient(to top, #fff600 0%, #ffc000 100%)
+
+h1
+  color: #ffffff
+  font-size: 65px
+  font-weight: 700
+  text-shadow: 0 0 67px rgba(0, 0, 0, 0.13)
+  text-align: right
+
+h2
+  font-size: 50px
+  font-weight: 300
+
+input
+  border: 1px solid #333
+  padding: 0 10px
+  box-sizing: border-box
+  outline: none
+  box-shadow: none
+  width: 100%
+  margin: 0 0 20px
+  height: 40px
+
+button
+  border: none
+  outline: none
+  box-shadow: none
+
+.subtitle
+  h2
+    color: #9b87fe
+  p
+    font-size: 24px
+    font-weight: 500
+    margin: 13px 0 0 0
+    line-height: 24px
+    color: #5d5d5d
+
+
+//main
+main
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  flex-wrap: wrap
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    width: 1787px
+    height: 1636px
+    top: 0
+    background: url("../img/circle-bg1.png") no-repeat center
+      size: contain
+  .container
+    z-index: 2
+    position: relative
+
+.main-left
+  width: 1060px
+  height: 800px
+  position: relative
+  overflow: hidden
+  border-radius: 0 0 60px
+
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-end
+  .img-bg
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    height: 100%
+    img
+      width: 100%
+      height: 100%
+
+  h1
+    position: relative
+    z-index: 1
+    padding: 25px 65px 0 0
+
+.main-right
+  //width: calc(100% - 1060px)
+  box-sizing: border-box
+  position: relative
+  z-index: 1
+  padding: 39px 0 0 63px
+  p
+    color: #3b3369
+    font-size: 20px
+    font-weight: 700
+    line-height: 24px
+    max-width: 252px
+
+.logo
+  width: 78px
+  height: 86px
+  margin: 0 0 41px
+
+.video-wrapper
+  position: relative
+  z-index: 1
+  border-radius: 60px 0
+  background-color: #3b3369
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  font-weight: 700
+  line-height: 24px
+  h4
+    font-size: 20px
+    color: #91f5c2
+  .links
+    color: #fff
+    margin: 10px 0 0 0
+    font-size: 20px
+    text-transform: uppercase
+  .text
+    max-width: 500px
+    padding: 35px 103px 30px 63px
+
+
+.icon-play
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 179px
+  min-width: 179px
+  height: 172px
+  background-image: linear-gradient(-34deg, #9d86ff 0%, #00ffc0 100%)
+  border-radius: 0 0 60px
+  &:hover
+    .icon
+      border-color: #00ffc0
+  .icon
+    transition: .3s ease
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 4px solid #ffffff
+    width: 98px
+    height: 98px
+    img
+      margin: 0 0 0 10px
+
+
+.box-game
+  position: relative
+  width: 652px
+  height: 382px
+  box-shadow: 5px 10px 39px 10px rgba(0, 0, 0, 0.11)
+  margin: 32px 0 43px -242px
+  border-radius: 60px 0
+  background-image: linear-gradient(-34deg, #9d86ff 0%, #00ffc0 100%)
+  padding: 75px 100px 30px
+  color: #42357f
+  &:before
+    content: ''
+    position: absolute
+    top: 12px
+    left: 12px
+    width: calc(100% - 24px)
+    height: calc(100% - 24px)
+    background: #fff
+    border-radius: 60px 0
+  .text
+    position: relative
+    z-index: 1
+    span
+      font-weight: 700
+      font-size: 20px
+    h5
+      text-transform: uppercase
+      margin: 33px 0 31px
+      font-size: 40px
+      letter-spacing: -0.8px
+      line-height: 52px
+      font-weight: 900
+
+
+//section-get
+.section-get
+  padding: 120px 0 99px
+
+.list-get
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  margin: -55px 0 0 auto
+  li
+    width: 246px
+    margin: 0 70px 0 0
+    text-align: center
+    font-size: 20px
+    color: #000
+    display: flex
+    flex-direction: column
+    align-items: center
+    &:last-child
+      margin: 0
+    .icon
+      width: 100px
+      height: 100px
+      box-shadow: 0 0 23px 1px rgba(0, 0, 0, 0.11)
+      border-radius: 20px 0
+      background-color: #ffffff
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 auto 35px
+
+
+//section-for-whom
+.section-for-whom
+  position: relative
+  .subtitle
+    position: relative
+    width: 100%
+    border-radius: 60px 0 0
+    padding: 45px 95px 30px
+    &:before
+      content: ''
+      position: absolute
+      background-image: linear-gradient(to right, #a691ff 0%, #00ffc0 100%)
+      width: calc(100% + 401px)
+      height: 100%
+      border-radius: 60px 0 0
+      left: 0
+      top: 0
+    h2, p
+      position: relative
+      z-index: 1
+      color: #ffffff
+  .container
+    background-color: #3b3369
+    border-radius: 60px 0 0
+  .image
+    position: absolute
+    right: -401px
+    top: 136px
+    width: 803px
+    z-index: 2
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 100%
+
+.panel-wrapper
+  padding: 101px 90px 87px
+  .btn
+    margin: 50px 0 0 0
+
+
+.panel_heading
+  width: 100%
+  margin: 0 0 22px
+  max-width: 587px
+  .block_title.in
+    color: #fff
+    &:before
+      content: '-'
+  .block_title
+    color: #91f5c2
+    font-size: 22px
+    font-weight: 700
+    width: 100%
+    position: relative
+    padding: 0 0 0 20px
+    cursor: pointer
+    &:before
+      content: '+'
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      transition: .3s ease
+  .block_hover
+    color: #c5b2dc
+    font-size: 16px
+    font-weight: 400
+    padding: 24px 0
+    max-width: 418px
+    display: none
+
+
+//program-wrapper
+.program-wrapper
+  .container
+    background: url("../img/bg1.jpg") no-repeat center
+      size: cover
+    padding: 124px 94px 46px 83px
+  .subtitle
+    width: 100%
+    h2
+      color: #5effbd
+    p
+      color: #51b79f
+  blockquote
+    color: #5effbd
+    font-size: 20px
+    padding: 0 0 0 23px
+    position: relative
+    max-width: 446px
+    font-weight: 400
+    margin: 0 0 0 auto
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 6px
+      border-radius: 3px
+      background-color: #4b9b7a
+
+
+
+
+
+//tab
+.tabs
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+  margin: 96px 0 63px
+
+.tabs__caption
+  position: relative
+  display: flex
+  flex-direction: column
+  &:before
+    content: ''
+    position: absolute
+    left: 23%
+    width: 1px
+    height: calc(100% + 20px)
+    top: -20px
+    background-color: #958bd1
+  li.active
+    color: #5effbd
+    p
+      font-weight: 700
+    .circle
+      background-color: #5effbd
+      border-color: #5effbd
+  li
+    position: relative
+    cursor: pointer
+    z-index: 1
+    display: flex
+    align-items: flex-start
+    color: #958bd1
+    margin: 0 0 70px 0
+    &:last-child
+      margin: 0
+    h6
+      font-weight: 700
+    p
+      font-size: 20px
+      max-width: 250px
+    .circle
+      margin: 0 20px 0 24px
+      width: 16px
+      min-width: 16px
+      height: 16px
+      border: 1px solid #958bd1
+        radius: 50%
+      background-color: #3b3369
+
+
+
+.tabs__content
+  display: none /* по умолчанию прячем все блоки */
+  flex-direction: column
+  align-items: flex-start
+  max-width: 466px
+  color: #ffffff
+  p, ul
+    margin: 0 0 23px
+    &:last-child
+      margin: 0
+  .text-italic
+    margin: 60px 0 0
+
+.tabs__content.active
+  display: flex /* по умолчанию показываем нужный блок */
+
+
+//clock-wrapper
+.clock-wrapper
+  position: relative
+  .container
+    background: url("../img/bg2.jpg") no-repeat center
+      size: cover
+  .image
+    position: absolute
+    left: -400px
+    top: 0
+    width: 998px
+    height: 718px
+  .text
+    padding: 229px 0 168px 0
+    margin: 0 194px 0 auto
+    max-width: 365px
+  h2
+    color: #5effbd
+  p
+    margin: 40px 0
+    color: #fff
+    font-size: 24px
+    font-weight: 400
+
+.time_out
+  display: flex
+  align-items: center
+  color: #5effbd
+  font-size: 60px
+  font-weight: 700
+
+.timer-dots
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  margin: 0 5px
+  span
+    display: flex
+    margin: 10px 0 0
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background: #5effbd
+
+.line-register
+  position: relative
+  width: 100%
+  border-radius: 0 0 60px
+
+
+  h6, a
+    position: relative
+    z-index: 1
+  a
+    width: 363px
+    height: 73px
+  h6
+    font-size: 22px
+    line-height: 32px
+    max-width: 467px
+    text-align: right
+    color: #3b3369
+    font-weight: 900
+    margin: 0 124px 0 0
+  .container
+    align-items: center
+    justify-content: center
+    padding: 47px 37px 50px 0
+    &:before
+      content: ''
+      position: absolute
+      background-image: linear-gradient(to right, #00ffc0 0%, #9d86ff 100%)
+      width: calc(100% + 401px)
+      height: 100%
+      border-radius: 0 0 60px
+      right: 0
+      top: 0
+
+
+//advantages
+.advantages
+  margin: 152px 0 0
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: space-between
+  position: relative
+  z-index: 1
+  .advantages-text
+    position: relative
+    color: #000000
+    max-width: 508px
+    height: 100%
+    font-size: 16px
+    font-weight: 400
+    margin: 0 60px 0 auto
+    &:before, &:after
+      content: '«'
+      position: absolute
+      font-size: 300px
+      color: #e7e7e7
+      width: 125px
+      height: 118px
+      font-weight: 700
+      display: flex
+      align-items: center
+      justify-content: center
+    &:before
+      top: 48px
+      left: -48px
+    &:after
+      content: '»'
+      right: -2px
+      bottom: 77px
+    p, h3
+      position: relative
+      z-index: 1
+    p
+      margin: 0 0 20px
+      &:last-child
+        margin: 0
+    h3
+      margin: 26px 0 63px
+      font-size: 20px
+      font-weight: 700
+  .subtitle
+    border-radius: 60px 0 0
+    background-color: #3b3369
+    padding: 49px 0 44px 85px
+    h2, p
+      color: #a69bda
+
+.advantages-image, .advantages-left, .about-right, .about-slider
+  width: 50%
+
+.advantages-image
+  .photo
+    width: 100%
+    img
+      width: 100%
+
+
+//about
+.about-slider
+  width: 50%
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  .slide
+    height: 800px
+    overflow: hidden
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+.about
+  position: relative
+  z-index: 1
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: stretch
+
+.about-text
+  background: url("../img/bg3.png") no-repeat top right
+    size: cover
+  max-width: 575px
+  padding: 81px 85px 50px 70px
+  color: #ffffff
+  ul
+    letter-spacing: -0.48px
+    margin: 69px 0 54px
+    line-height: 24px
+  h2
+    color: #a69bda
+  .btn
+    width: 363px
+
+
+.slick-arrow
+  bottom: 0
+  transform: translate(0)
+  top: auto
+  width: 80px
+  height: 78px
+  background: url("../img/arrow-right.png") no-repeat center #ffffff
+    size: 19px
+  z-index: 2
+  &:before
+    display: none
+  &:hover
+    background: url("../img/arrow-left.png") no-repeat center rgba(#ffffff, .3)
+      size: 19px
+  &:focus
+    opacity: 1
+    background: url("../img/arrow-right.png") no-repeat center #ffffff
+      size: 19px
+
+.slick-prev
+  right: 80px
+  left: auto
+  transform: rotate(180deg)
+  &:hover
+    transform: rotate(0)
+  &:focus
+    transform: rotate(180deg)
+
+.slick-next
+  right: 0
+  &:hover
+    transform: rotate(180deg)
+  &:focus
+    transform: rotate(0)
+
+//reviews
+.reviews
+  margin: 213px 0 222px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: -407px
+    background: url("../img/circle-bg2.png") no-repeat center
+      size: cover
+    width: 100%
+    height: 1203px
+  .container
+    justify-content: space-between
+    z-index: 1
+
+.reviews-text
+  max-width: 350px
+  color: #000000
+  padding: 43px 0 0 0
+  h3
+    font-size: 40px
+    font-weight: 300
+    margin: 0 0 45px
+  p
+    line-height: 22px
+    max-width: 320px
+
+.reviews-scroll
+  height: 646px
+  padding: 30px 61px
+  overflow-y: scroll
+  &::-webkit-scrollbar
+    width: 10px
+    height: 10px
+  &::-webkit-scrollbar-track
+    background-color: #a691ff
+  &::-webkit-scrollbar-track-piece
+    background-color: #b6dfd5
+  &::-webkit-scrollbar-thumb
+    background-color: #a691ff
+  &::-webkit-scrollbar-corner
+    background-color: #b6dfd5
+  &::-webkit-resizer
+    background-color: #a691ff
+
+.reviews-box
+  width: 648px
+  box-shadow: 0 0 23px 1px rgba(0, 0, 0, 0.11)
+  background: #fff
+  border-radius: 94px 0 0 94px
+  padding: 22px 30px 27px
+  display: flex
+  align-items: center
+  margin: 0 0 25px auto
+  .description
+    color: #000000
+    line-height: 22px
+    font-size: 16px
+    h4
+      font-size: 24px
+      line-height: 30px
+  .photo
+    position: relative
+    border-radius: 50%
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    width: 136px
+    height: 136px
+    min-width: 136px
+    overflow: hidden
+    margin: 0 63px 0 0
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-image: linear-gradient(47deg, #00ff9c 0%, #5b57ff 61%, #5b57ff 76%)
+      opacity: .5
+
+
+//video-reviews
+.video-reviews
+  .subtitle
+    padding: 60px 0 60px 65px
+    &:before
+      content: ''
+      position: absolute
+      background-image: linear-gradient(to right, #a691ff 0%, #00ffc0 100%)
+      width: calc(100% + 401px)
+      height: 100%
+      border-radius: 60px 0 0
+      left: 0
+      top: 0
+    h2
+      color: #ffffff
+      font-size: 40px
+      position: relative
+      z-index: 1
+
+.video-reviews__content
+  padding: 138px 0 107px
+  width: 100%
+  background-color: #3b3369
+  position: relative
+  &:before, &:after
+    content: ''
+    position: absolute
+    border-radius: 50%
+  &:after
+    width: 282px
+    height: 282px
+    background: url("../img/circle1.png") no-repeat center
+      size: contain
+    top: 119px
+    right: 211px
+  &:before
+    width: 523px
+    height: 523px
+    background: url("../img/circle2.png") no-repeat center
+      size: contain
+    left: 83px
+    top: 517px
+  .container
+    z-index: 1
+    justify-content: space-between
+  .btn
+    width: 363px
+    margin: 50px auto 0
+
+
+.video-reviews__box
+  width: 49%
+  margin: 0 0 40px
+  .video-wrap
+    width: 100%
+    position: relative
+  .text
+    color: #a69bda
+    font-size: 24px
+    line-height: 33.31px
+    padding: 0 30px
+
+
+.btn-play
+  position: absolute
+  width: 99px
+  height: 99px
+  border: 4px solid #ffffff
+  background-color: #a69bda
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  top: 52px
+  left: 56px
+
+
+
+footer
+  background-color: #262339
+  padding: 69px 0 79px
+  color: #757288
+  line-height: 26px
+  letter-spacing: 0.8px
+  a
+    color: #b2afc7
+  .container
+    justify-content: space-between
+
+.footer-right
+  text-align: right
+
+
+
+
+.modal__div
+  position: fixed
+  width: 400px
+  height: 100%
+  top: 45%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 101
+  overflow: auto
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  display: none
+  opacity: 0
+  .modal__close
+    position: absolute
+    right: 10px
+    top: 10px
+    color: #333
+  .modal__wrapper
+    background: #fff
+    width: 100%
+    height: auto
+    overflow: auto
+    margin: 50px auto
+    padding: 30px 40px
+    box-sizing: border-box
+    position: relative
+    h2
+      margin: 30px 0
+      font-size: 26px
+      color: #ffffff
+      text-align: center
+  .modal-form
+    flex-direction: column
+    align-items: center
+    width: 100%
+    label
+      width: 100%
+      height: 100%
+      margin: 0 0 20px
+      input
+        font-size: 14px
+        width: 100%
+        box-sizing: border-box
+      textarea
+        height: 100px
+        box-sizing: border-box
+        font-size: 14px
+    .btn-accent
+      margin: 10px auto
+
+.overlay
+  z-index: 100
+  position: fixed
+  background-color: #000
+  opacity: 0.8
+  -moz-opacity: 0.8
+  filter: alpha(opacity = 80)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+
+
+@import "media"
+// Всегда в конце
